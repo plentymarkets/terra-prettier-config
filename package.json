@@ -1,11 +1,11 @@
 {
     "name": "@plentymarkets/terra-prettier-config",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "description": "custom prettier configuration",
     "main": ".prettierrc.js",
     "scripts": {
         "build": "rm -rf dist && gulp copy",
-        "release": "npm run build && gulp updateVersion && npm publish dist"
+        "release": "npm run build && gulp updateVersion && npm publish dist --access public"
     },
     "repository": {
         "type": "git",
