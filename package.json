@@ -5,7 +5,7 @@
     "main": ".prettierrc.js",
     "scripts": {
         "build": "rm -rf dist && gulp copy",
-        "release": "npm run build && gulp updateVersion"
+        "release": "npm run build && gulp updateVersion && npm publish dist"
     },
     "repository": {
         "type": "git",
