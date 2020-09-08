@@ -1,0 +1,47 @@
+{
+    "name": "@plentymarkets/terra-prettier-config",
+    "version": "0.0.0",
+    "description": "custom prettier configuration",
+    "main": ".prettierrc.js",
+    "scripts": {
+        "build": "rm -rf dist && gulp copy",
+        "release": "npm run build && gulp updateVersion"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/plentymarkets/terra-prettier-config.git"
+    },
+    "keywords": [
+        "prettier",
+        "configuration",
+        "config",
+        "terra"
+    ],
+    "author": "plentymarkets",
+    "license": "UNLICENSED",
+    "bugs": {
+        "url": "https://github.com/plentymarkets/terra-prettier-config/issues"
+    },
+    "homepage": "https://github.com/plentymarkets/terra-prettier-config#readme",
+    "peerDependencies": {
+        "prettier": "2.1.1"
+    },
+    "devDependencies": {
+        "gulp": "^4.0.2",
+        "gulp-prompt": "^1.2.0",
+        "husky": "^4.3.0",
+        "lint-staged": "^10.3.0",
+        "prettier": "2.1.1",
+        "semver": "^7.3.2"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*": [
+            "prettier --write --ignore-unknown"
+        ]
+    }
+}
